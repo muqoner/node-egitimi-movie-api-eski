@@ -8,6 +8,7 @@ const bodyParser = require("body-parser");
 
 var indexRouter = require('./routes/index');
 var movie = require('./routes/movie');
+var director = require('./routes/director');
 
 var app = express();
 mongoose.connect("mongodb://localhost/movie-api")
@@ -35,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/api/movies', movie);
+app.use('/api/director', director);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
