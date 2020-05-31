@@ -17,15 +17,17 @@ describe("Node Server Test",()=>{
         })
     })
 })
-
-// describe("Node Server Test", ()=>{
-//     it("(GET /) anasayfayı döndürür", (done)=>{
+// describe("/api/movies Tests",()=>{
+//     before((done)=>{
 //         chai.request(server)
-//         .get("/")
+//         .post("/authenticate")
+//         .send({  username: "ozgur5", password: "12345"})
 //         .end((err,res)=>{
-//             res.should.have.status(200);
+//             token = res.body.token;
+//             console.log(token);
 //             done();
+
 //         })
-//     });
     
-// })
+//     });
+//     });
